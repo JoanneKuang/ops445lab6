@@ -6,7 +6,7 @@ class Student:
     # Define the name and number when a student object is created, ex. student1 = Student('john', 025969102)
     def __init__(self, name, number):
         self.name = name
-        self.number = str(number)  # Ensure number is always a string
+        self.number = str(number)  # number is always a string
         self.courses = {}
 
     # Return student name and number
@@ -20,7 +20,7 @@ class Student:
     # Calculate the grade point average of all courses and return a string
     def displayGPA(self):
         if len(self.courses) == 0:
-            return 'GPA of student ' + self.name + ' is 0'  # Handle division by zero
+            return 'GPA of student ' + self.name + ' is 0'  # will / by 0
         gpa = 0.0
         for course in self.courses.keys():
             gpa = gpa + self.courses[course]
